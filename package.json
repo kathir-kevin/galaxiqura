@@ -5,7 +5,6 @@
   "main": "index.html",
   "scripts": {
     "dev": "node serve.js",
-    "build": "echo GALAXIQURA production build ready",
     "vendor": "node -e \"const fs=require('fs'); fs.mkdirSync('assets/vendor/three', {recursive:true}); fs.copyFileSync('node_modules/three/build/three.min.js', 'assets/vendor/three/three.min.js'); console.log('Three.js vendored successfully.');\"",
     "validate": "node -e \"const fs=require('fs'), vm=require('vm'); ['data.js','main.js','three-hero.js','fx.js'].forEach(f=>{ new vm.Script(fs.readFileSync('assets/js/'+f, 'utf8')); console.log('✓ Validated assets/js/' + f); });\""
   },
